@@ -129,6 +129,7 @@ namespace TestProject
                 {
                     if (_skipNullOrDefault)
                         return MoveNext();
+
                     return true;
                 }
 
