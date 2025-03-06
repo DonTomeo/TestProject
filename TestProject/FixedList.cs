@@ -113,6 +113,7 @@ namespace TestProject
 
             public void Dispose()
             {
+                Console.WriteLine("Disposed");
             }
 
             public bool MoveNext()
