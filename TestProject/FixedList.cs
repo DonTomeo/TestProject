@@ -119,11 +119,13 @@ namespace TestProject
             {
                 _index++;
                 T? defaultValue = default(T);
+                EqualityComparer<T> equalityComparer = EqualityComparer<T>.Default;
+
                 if (_list.values == null || _index >= _list.values.Length)
                 {
                     return false;
                 }
-                else if (defaultValue == null || defaultValue.Equals(_list.values[_index]))
+                else if (defaultValue == null || equalityComparer.Equals(_list.values[_index]))
                 {
                     if (_skipNullOrDefault)
                         return MoveNext();
